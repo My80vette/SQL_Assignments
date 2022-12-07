@@ -1,5 +1,4 @@
 - 👋 Hi, I’m @My80vette
-- 👀 I’m interested in CyberSecurity
 - 🌱 I’m currently learning Software Engineering
 - 📫 CAPRIOTN@my.erau.edu
 
