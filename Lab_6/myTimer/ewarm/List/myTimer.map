@@ -1,0 +1,350 @@
+###############################################################################
+#
+# IAR ELF Linker V7.70.1.11437/W32 for ARM                21/Nov/2022  15:52:29
+# Copyright 2007-2016 IAR Systems AB.
+#
+#    Output file  =  
+#        C:\Users\CAPRIOTN\Desktop\temp\ti\TivaWare_C_Series-2.1.4.178\examples\boards\dk-tm4c123g\myTimer\ewarm\Exe\myTimer.out
+#    Map file     =  
+#        C:\Users\CAPRIOTN\Desktop\temp\ti\TivaWare_C_Series-2.1.4.178\examples\boards\dk-tm4c123g\myTimer\ewarm\List\myTimer.map
+#    Command line =  
+#        C:\Users\CAPRIOTN\Desktop\temp\ti\TivaWare_C_Series-2.1.4.178\examples\boards\dk-tm4c123g\myTimer\ewarm\Obj\cfal96x64x16.o
+#        C:\Users\CAPRIOTN\Desktop\temp\ti\TivaWare_C_Series-2.1.4.178\driverlib\ewarm\Exe\driverlib.a
+#        C:\Users\CAPRIOTN\Desktop\temp\ti\TivaWare_C_Series-2.1.4.178\grlib\ewarm\Exe\grlib.a
+#        C:\Users\CAPRIOTN\Desktop\temp\ti\TivaWare_C_Series-2.1.4.178\examples\boards\dk-tm4c123g\myTimer\ewarm\Obj\myTimer.o
+#        C:\Users\CAPRIOTN\Desktop\temp\ti\TivaWare_C_Series-2.1.4.178\examples\boards\dk-tm4c123g\myTimer\ewarm\Obj\startup_ewarm.o
+#        --redirect _Printf=_PrintfTiny --redirect _Scanf=_ScanfSmall -o
+#        C:\Users\CAPRIOTN\Desktop\temp\ti\TivaWare_C_Series-2.1.4.178\examples\boards\dk-tm4c123g\myTimer\ewarm\Exe\myTimer.out
+#        --map
+#        C:\Users\CAPRIOTN\Desktop\temp\ti\TivaWare_C_Series-2.1.4.178\examples\boards\dk-tm4c123g\myTimer\ewarm\List\myTimer.map
+#        --config
+#        C:\Users\CAPRIOTN\Desktop\temp\ti\TivaWare_C_Series-2.1.4.178\examples\boards\dk-tm4c123g\myTimer\myTimer.icf
+#        --semihosting --entry __iar_program_start --vfe
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at start of [0x00000000-0x0003ffff] { ro section .intvec };
+"P1":  place in [from 0x00000000 to 0x0003ffff] { ro };
+"A1":  place at start of [0x20000000-0x20007fff] { section VTABLE };
+"P2":  place in [from 0x20000000 to 0x20007fff] { rw, block HEAP };
+do not initialize { section .noinit };
+initialize by copy { rw };
+
+  Section            Kind        Address    Size  Object
+  -------            ----        -------    ----  ------
+"A0":                                      0x26c
+  .intvec            const    0x00000000   0x26c  startup_ewarm.o [1]
+                            - 0x0000026c   0x26c
+
+"P1":                                     0x1ff0
+  .text              ro code  0x0000026c   0x7e8  myTimer.o [1]
+  .text              ro code  0x00000a54    0xb2  rectangle.o [5]
+  .text              ro code  0x00000b06     0xa  xsprout.o [3]
+  .text              ro code  0x00000b10    0xca  uart.o [4]
+  .text              ro code  0x00000bdc    0xb8  interrupt.o [4]
+  .text              ro code  0x00000c94   0x4ea  string.o [5]
+  .text              ro code  0x00001180   0x2e4  sysctl.o [4]
+  .text              ro code  0x00001464     0x4  exit.o [3]
+  .text              ro code  0x00001468   0x1ea  gpio.o [4]
+  .text              ro code  0x00001652    0x32  comp.o [4]
+  .text              ro code  0x00001684    0x34  sprintf.o [3]
+  .text              ro code  0x000016b8    0x10  fpu.o [4]
+  .text              ro code  0x000016c8   0x3fc  cfal96x64x16.o [1]
+  .text              ro code  0x00001ac4    0x78  context.o [5]
+  .text              ro code  0x00001b3c    0x10  cpu.o [4]
+  .text              ro code  0x00001b4c     0xa  cexit.o [7]
+  .text              ro code  0x00001b56   0x14e  xprintftiny.o [3]
+  .text              ro code  0x00001ca4    0x3a  ABImemset48.o [7]
+  .text              ro code  0x00001ce0    0x14  exit.o [8]
+  .text              ro code  0x00001cf4    0x36  strlen.o [7]
+  .rodata            const    0x00001d2c   0x3c0  fontfixed6x8.o [5]
+  .text              ro code  0x000020ec    0x40  zero_init3.o [7]
+  .text              ro code  0x0000212c    0x2c  copy_init3.o [7]
+  .rodata            const    0x00002158    0x28  cfal96x64x16.o [1]
+  .text              ro code  0x00002180    0x28  data_init.o [7]
+  .text              ro code  0x000021a8    0x22  fpinit_M.o [6]
+  .iar.init_table    const    0x000021cc    0x2c  - Linker created -
+  .text              ro code  0x000021f8    0x1a  startup_ewarm.o [1]
+  .text              ro code  0x00002212     0xc  cstartup_M.o [7]
+  .text              ro code  0x00002220    0x1a  cmain.o [7]
+  .text              ro code  0x0000223a     0x4  low_level_init.o [3]
+  Initializer bytes  const    0x00002240    0x14  <for P2-1>
+  .text              ro code  0x00002254     0x8  charmap.o [5]
+  .rodata            const    0x0000225c     0x0  zero_init3.o [7]
+  .rodata            const    0x0000225c     0x0  copy_init3.o [7]
+                            - 0x0000225c  0x1ff0
+
+"A1":                                      0x26c
+  VTABLE             zero     0x20000000   0x26c  interrupt.o [4]
+                            - 0x2000026c   0x26c
+
+"P2", part 1 of 3:                          0x14
+  P2-1                        0x2000026c    0x14  <Init block>
+    .data            inited   0x2000026c    0x14  cfal96x64x16.o [1]
+                            - 0x20000280    0x14
+
+"P2", part 2 of 3:                         0x400
+  .noinit            uninit   0x20000280   0x400  startup_ewarm.o [1]
+                            - 0x20000680   0x400
+
+"P2", part 3 of 3:                          0x8c
+  .bss               zero     0x20000680    0x88  myTimer.o [1]
+  .bss               zero     0x20000708     0x4  context.o [5]
+                            - 0x2000070c    0x8c
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address     Size
+          -------     ----
+Zero (__iar_zero_init3)
+    2 destination ranges, total size 0x2f8:
+          0x20000000  0x26c
+          0x20000680   0x8c
+
+Copy (__iar_copy_init3)
+    1 source range, total size 0x14:
+          0x00002240   0x14
+    1 destination range, total size 0x14:
+          0x2000026c   0x14
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module            ro code  ro data  rw data
+    ------            -------  -------  -------
+C:\Users\CAPRIOTN\Desktop\temp\ti\TivaWare_C_Series-2.1.4.178\examples\boards\dk-tm4c123g\myTimer\ewarm\Obj: [1]
+    cfal96x64x16.o      1 020       60       20
+    myTimer.o           2 024               136
+    startup_ewarm.o        26      620    1 024
+    -------------------------------------------
+    Total:              3 070      680    1 180
+
+command line: [2]
+    -------------------------------------------
+    Total:
+
+dl7M_tln.a: [3]
+    exit.o                  4
+    low_level_init.o        4
+    sprintf.o              52
+    xprintftiny.o         334
+    xsprout.o              10
+    -------------------------------------------
+    Total:                404
+
+driverlib.a: [4]
+    comp.o                 50
+    cpu.o                  16
+    fpu.o                  16
+    gpio.o                490
+    interrupt.o           184               620
+    sysctl.o              740
+    uart.o                202
+    -------------------------------------------
+    Total:              1 698               620
+
+grlib.a: [5]
+    charmap.o               8
+    context.o             120                 4
+    fontfixed6x8.o                 960
+    rectangle.o           178
+    string.o            1 258
+    -------------------------------------------
+    Total:              1 564      960        4
+
+m7M_tls.a: [6]
+    fpinit_M.o             34
+    -------------------------------------------
+    Total:                 34
+
+rt7M_tl.a: [7]
+    ABImemset48.o          58
+    cexit.o                10
+    cmain.o                26
+    copy_init3.o           44
+    cstartup_M.o           12
+    data_init.o            40
+    strlen.o               54
+    zero_init3.o           64
+    -------------------------------------------
+    Total:                308
+
+shb_l.a: [8]
+    exit.o                 20
+    -------------------------------------------
+    Total:                 20
+
+    Gaps                    8        4
+    Linker created                  46
+-----------------------------------------------
+    Grand Total:        7 106    1 690    1 804
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                      Address   Size  Type      Object
+-----                      -------   ----  ----      ------
+.iar.init_table$$Base   0x000021cc          --   Gb  - Linker created -
+.iar.init_table$$Limit  0x000021f8          --   Gb  - Linker created -
+?main                   0x00002221         Code  Gb  cmain.o [7]
+CFAL96x64x16ColorTranslate
+                        0x00001959   0x16  Code  Lc  cfal96x64x16.o [1]
+CFAL96x64x16Flush       0x0000196f    0x2  Code  Lc  cfal96x64x16.o [1]
+CFAL96x64x16Init        0x00001971  0x118  Code  Gb  cfal96x64x16.o [1]
+CFAL96x64x16LineDrawH   0x00001845   0x5e  Code  Lc  cfal96x64x16.o [1]
+CFAL96x64x16LineDrawV   0x000018a7   0x7c  Code  Lc  cfal96x64x16.o [1]
+CFAL96x64x16PixelDraw   0x00001741   0x2e  Code  Lc  cfal96x64x16.o [1]
+CFAL96x64x16PixelDrawMultiple
+                        0x0000176f   0xb2  Code  Lc  cfal96x64x16.o [1]
+CFAL96x64x16RectFill    0x0000192d   0x2c  Code  Lc  cfal96x64x16.o [1]
+CFAL96x64x16WriteCommand
+                        0x000016c9   0x32  Code  Lc  cfal96x64x16.o [1]
+CFAL96x64x16WriteData   0x000016fb   0x30  Code  Lc  cfal96x64x16.o [1]
+COMPIntHandler          0x00000663   0x74  Code  Gb  myTimer.o [1]
+CPUcpsid                0x00001b3d    0x8  Code  Gb  cpu.o [4]
+CPUcpsie                0x00001b45    0x8  Code  Gb  cpu.o [4]
+ComparatorConfigure     0x00001653    0x8  Code  Gb  comp.o [4]
+ComparatorIntClear      0x0000167b    0xa  Code  Gb  comp.o [4]
+ComparatorIntEnable     0x0000166b   0x10  Code  Gb  comp.o [4]
+ComparatorValueGet      0x0000165b   0x10  Code  Gb  comp.o [4]
+FPULazyStackingEnable   0x000016b9    0xc  Code  Gb  fpu.o [4]
+FaultISR                0x0000220f    0x2  Code  Lc  startup_ewarm.o [1]
+GPIODirModeSet          0x00001469   0x28  Code  Gb  gpio.o [4]
+GPIOIntClear            0x000015e1    0x6  Code  Gb  gpio.o [4]
+GPIOIntEnable           0x000015db    0x6  Code  Gb  gpio.o [4]
+GPIOIntHandler          0x00000589   0xb2  Code  Gb  myTimer.o [1]
+GPIOIntTypeSet          0x00001491   0x4c  Code  Gb  gpio.o [4]
+GPIOPadConfigSet        0x000014dd   0xfe  Code  Gb  gpio.o [4]
+GPIOPinRead             0x000015e7    0x6  Code  Gb  gpio.o [4]
+GPIOPinTypeGPIOInput    0x000015f7   0x14  Code  Gb  gpio.o [4]
+GPIOPinTypeGPIOOutput   0x0000160b    0xa  Code  Gb  gpio.o [4]
+GPIOPinTypeUART         0x0000162f   0x14  Code  Gb  gpio.o [4]
+GPIOPinWrite            0x000015ed    0x6  Code  Gb  gpio.o [4]
+GrContextFontSet        0x0000117b    0x4  Code  Gb  string.o [5]
+GrContextInit           0x00001ac5   0x5e  Code  Gb  context.o [5]
+GrDefaultStringRenderer
+                        0x00000d15   0xb2  Code  Gb  string.o [5]
+GrFontBaselineGet       0x0000106d   0x18  Code  Gb  string.o [5]
+GrFontCodepageGet       0x0000111f   0x1c  Code  Gb  string.o [5]
+GrFontGlyphDataGet      0x0000109b   0x84  Code  Gb  string.o [5]
+GrFontGlyphRender       0x00000df7  0x21e  Code  Gb  string.o [5]
+GrFontInfoGet           0x00001043   0x2a  Code  Gb  string.o [5]
+GrMapISO8859_1_Unicode  0x00002255    0x8  Code  Gb  charmap.o [5]
+GrRectFill              0x00000a55   0xb2  Code  Gb  rectangle.o [5]
+GrStringDraw            0x00000cff   0x16  Code  Gb  string.o [5]
+GrStringNextCharGet     0x00000dc7   0x30  Code  Gb  string.o [5]
+GrStringWidthGet        0x00000c95   0x6a  Code  Gb  string.o [5]
+IntDefaultHandler       0x00002211    0x2  Code  Lc  startup_ewarm.o [1]
+IntEnable               0x00000c19   0x56  Code  Gb  interrupt.o [4]
+IntMasterDisable        0x00000be5    0x6  Code  Gb  interrupt.o [4]
+IntMasterEnable         0x00000bdd    0x8  Code  Gb  interrupt.o [4]
+IntRegister             0x00000bf3   0x26  Code  Gb  interrupt.o [4]
+NmiSR                   0x0000220d    0x2  Code  Lc  startup_ewarm.o [1]
+Region$$Table$$Base     0x000021cc          --   Gb  - Linker created -
+Region$$Table$$Limit    0x000021f8          --   Gb  - Linker created -
+ResetISR                0x000021f9    0xe  Code  Gb  startup_ewarm.o [1]
+SysCtlClockGet          0x0000129d  0x110  Code  Gb  sysctl.o [4]
+SysCtlClockSet          0x000011c5   0xd8  Code  Gb  sysctl.o [4]
+SysCtlDelay             0x000011bd    0x8  Code  Gb  sysctl.o [4]
+SysCtlPeripheralEnable  0x000011a1    0x8  Code  Gb  sysctl.o [4]
+SysCtlPeripheralReady   0x00001181    0x8  Code  Gb  sysctl.o [4]
+UARTCharGetNonBlocking  0x00000baf    0xe  Code  Gb  uart.o [4]
+UARTCharPut             0x00000bbd    0xa  Code  Gb  uart.o [4]
+UARTCharsAvail          0x00000b9f    0x6  Code  Gb  uart.o [4]
+UARTConfigSetExpClk     0x00000b11   0x4c  Code  Gb  uart.o [4]
+UARTDisable             0x00000b77   0x1e  Code  Gb  uart.o [4]
+UARTEnable              0x00000b5d   0x1a  Code  Gb  uart.o [4]
+UARTIntClear            0x00000bd7    0x4  Code  Gb  uart.o [4]
+UARTIntEnable           0x00000bc7    0x6  Code  Gb  uart.o [4]
+UARTIntHandler          0x0000054d   0x34  Code  Gb  myTimer.o [1]
+UARTIntStatus           0x00000bcd    0xa  Code  Gb  uart.o [4]
+UARTSend                0x000002a1   0x1e  Code  Gb  myTimer.o [1]
+UpdateContextCharMapping
+                        0x0000113b   0x40  Code  Lc  string.o [5]
+_PrintfTiny             0x00001b6f  0x136  Code  Gb  xprintftiny.o [3]
+_SProut                 0x00000b07    0xa  Code  Gb  xsprout.o [3]
+__aeabi_memset4         0x00001ca5         Code  Gb  ABImemset48.o [7]
+__aeabi_memset8         0x00001ca5         Code  Gb  ABImemset48.o [7]
+__cmain                 0x00002221         Code  Gb  cmain.o [7]
+__exit                  0x00001ce1   0x14  Code  Gb  exit.o [8]
+__iar_Memset4_word      0x00001cad         Code  Gb  ABImemset48.o [7]
+__iar_Memset8_word      0x00001cad         Code  Gb  ABImemset48.o [7]
+__iar_copy_init3        0x0000212d   0x2c  Code  Gb  copy_init3.o [7]
+__iar_data_init3        0x00002181   0x28  Code  Gb  data_init.o [7]
+__iar_init_vfp          0x000021a9         Code  Gb  fpinit_M.o [6]
+__iar_program_start     0x00002213         Code  Gb  cstartup_M.o [7]
+__iar_zero_init3        0x000020ed   0x40  Code  Gb  zero_init3.o [7]
+__low_level_init        0x0000223b    0x4  Code  Gb  low_level_init.o [3]
+__vector_table          0x00000000  0x26c  Data  Gb  startup_ewarm.o [1]
+_call_main              0x0000222d         Code  Gb  cmain.o [7]
+_exit                   0x00001b4d         Code  Gb  cexit.o [7]
+_main                   0x00002237         Code  Gb  cmain.o [7]
+b_toggle                0x20000682    0x1  Data  Gb  myTimer.o [1]
+buf                     0x200006c8   0x40  Data  Gb  myTimer.o [1]
+button_count            0x200006bc    0x4  Data  Gb  myTimer.o [1]
+clearMenu               0x00000313   0x18  Code  Gb  myTimer.o [1]
+clearScreen             0x0000026d   0x34  Code  Gb  myTimer.o [1]
+comparator              0x200006c4    0x4  Data  Gb  myTimer.o [1]
+exit                    0x00001465    0x4  Code  Gb  exit.o [3]
+g_pfnRAMVectors         0x20000000  0x26c  Data  Lc  interrupt.o [4]
+g_psDefaultCodePointMapTable
+                        0x00001b2c   0x10  Data  Gb  context.o [5]
+g_psGrLibDefaults       0x20000708    0x4  Data  Lc  context.o [5]
+g_pui32EnRegs           0x00000c80   0x14  Data  Lc  interrupt.o [4]
+g_pui32Xtals            0x000013f8   0x6c  Data  Lc  sysctl.o [4]
+g_pui8FontFixed6x8Data  0x00001d2c  0x2f8  Data  Lc  fontfixed6x8.o [5]
+g_sCFAL96x64x16         0x00002158   0x28  Data  Gb  cfal96x64x16.o [1]
+g_sContext              0x2000068c   0x2c  Data  Gb  myTimer.o [1]
+g_sFontFixed6x8         0x00002024   0xc8  Data  Gb  fontfixed6x8.o [5]
+g_ui8DisplayInitCommands
+                        0x2000026c   0x14  Data  Lc  cfal96x64x16.o [1]
+led_toggle              0x20000680    0x1  Data  Gb  myTimer.o [1]
+loopCount               0x200006b8    0x4  Data  Gb  myTimer.o [1]
+main                    0x00000709  0x1a2  Code  Gb  myTimer.o [1]
+out                     0x00001b57   0x18  Code  Lc  xprintftiny.o [3]
+printMenu               0x000002bf   0x54  Code  Gb  myTimer.o [1]
+processMenu             0x000004e1   0x6c  Code  Gb  myTimer.o [1]
+pui32Stack              0x20000280  0x400  Data  Lc  startup_ewarm.o [1]
+ref_volt_cross          0x200006c0    0x4  Data  Gb  myTimer.o [1]
+sRect                   0x20000684    0x8  Data  Gb  myTimer.o [1]
+splash                  0x0000032b   0xa0  Code  Gb  myTimer.o [1]
+sprintf                 0x00001685   0x34  Code  Gb  sprintf.o [3]
+strlen                  0x00001cf5         Code  Gb  strlen.o [7]
+z_toggle                0x20000681    0x1  Data  Gb  myTimer.o [1]
+
+
+[1] = C:\Users\CAPRIOTN\Desktop\temp\ti\TivaWare_C_Series-2.1.4.178\examples\boards\dk-tm4c123g\myTimer\ewarm\Obj
+[2] = command line
+[3] = dl7M_tln.a
+[4] = driverlib.a
+[5] = grlib.a
+[6] = m7M_tls.a
+[7] = rt7M_tl.a
+[8] = shb_l.a
+
+  7 106 bytes of readonly  code memory
+  1 690 bytes of readonly  data memory
+  1 804 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
