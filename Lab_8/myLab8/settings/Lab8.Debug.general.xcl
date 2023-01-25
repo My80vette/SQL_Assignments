@@ -1,0 +1,15 @@
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\arm\bin\armproc.dll" 
+
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\arm\bin\armlmiftdi.dll" 
+
+"C:\Users\CAPRIOTN\Desktop\Temp\ti\TivaWare_C_Series-2.1.4.178\examples\boards\dk-tm4c123g\myLab8\Debug\Exe\myLab8.out" 
+
+--plugin "C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\arm\bin\armbat.dll" 
+
+--device_macro "C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\arm\config\debugger\TexasInstruments\TM4C123.dmac" 
+
+--flash_loader "C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\arm\config\flashloader\TexasInstruments\FlashTC4_H6_o.board" 
+
+
+
+
